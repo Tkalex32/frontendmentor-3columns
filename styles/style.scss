@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+$orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$v-dark-cyan: hsl(179, 100%, 13%);
+$t-white: hsla(0, 0%, 100%, 0.75);
+$v-light-gray: hsl(0, 0%, 95%);
+$backgrounds: ($orange),
+($dark-cyan),
+($v-dark-cyan);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.5rem;
+  color: $t-white;
+  background: $v-light-gray;
+}
+
+img {
+  transition: all 0.5s ease-out;
+}
+
+.container {
+  display: flex;
+  width: 60vw;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: auto;
+}
+
+.card {
+  width: 100%;
+  transform-style: preserve-3d;
+  -padding: 1.5rem;
+  padding: var(--padding);
+}
+
+.card-title,
+.card-body {
+  margin: 2rem 0;
+  transition: all 0.5s ease-out;
+}
+
+@for $i from 1 through length($backgrounds) {
+  .card:nth-child(#{length($backgrounds)}n + #{$i}) {
+    background: unquote(nth($backgrounds, $i));
+
+    & .card-footer a {
+      display: inline-block;
+      background: $v-light-gray;
+      padding: 1rem;
+      border: 0.1rem solid $v-light-gray;
+      border-radius: 2rem;
+      text-decoration: none;
+      color: unquote(nth($backgrounds, $i));
+    }
+
+    & .card-footer a:hover {
+      background: unquote(nth($backgrounds, $i));
+      border: 0.1rem solid $v-light-gray;
+      color: $v-light-gray;
+    }
+  }
+}
+
+.card-title {
+  font-family: 'Big Shoulders Display', cursive;
+  color: $v-light-gray;
+  padding: 10px 0 20px;
+  transform-origin: left;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  section {
+    margin: 10px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-footer {
+    margin: 2rem 0;
+  }
+
+  .card {
+    padding: 3rem 3rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .container {
+    height: 60vh;
+    transform: translateY(25%);
+  }
+
+  .card-footer {
+    margin: 5rem 0 2rem;
+    position: absolute;
+    bottom: 3rem;
+  }
+
+  .card {
+    padding: 3rem;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

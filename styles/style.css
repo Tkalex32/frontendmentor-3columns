@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+  background: #f2f2f2;
+}
+
+img {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60vw;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: auto;
+}
+
+.card {
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -padding: 1.5rem;
+  padding: var(--padding);
+}
+
+.card-title,
+.card-body {
+  margin: 2rem 0;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.card:nth-child(3n + 1) {
+  background: #e38826;
+}
+
+.card:nth-child(3n + 1) .card-footer a {
+  display: inline-block;
+  background: #f2f2f2;
+  padding: 1rem;
+  border: 0.1rem solid #f2f2f2;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: #e38826;
+}
+
+.card:nth-child(3n + 1) .card-footer a:hover {
+  background: #e38826;
+  border: 0.1rem solid #f2f2f2;
+  color: #f2f2f2;
+}
+
+.card:nth-child(3n + 2) {
+  background: #006970;
+}
+
+.card:nth-child(3n + 2) .card-footer a {
+  display: inline-block;
+  background: #f2f2f2;
+  padding: 1rem;
+  border: 0.1rem solid #f2f2f2;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: #006970;
+}
+
+.card:nth-child(3n + 2) .card-footer a:hover {
+  background: #006970;
+  border: 0.1rem solid #f2f2f2;
+  color: #f2f2f2;
+}
+
+.card:nth-child(3n + 3) {
+  background: #004241;
+}
+
+.card:nth-child(3n + 3) .card-footer a {
+  display: inline-block;
+  background: #f2f2f2;
+  padding: 1rem;
+  border: 0.1rem solid #f2f2f2;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: #004241;
+}
+
+.card:nth-child(3n + 3) .card-footer a:hover {
+  background: #004241;
+  border: 0.1rem solid #f2f2f2;
+  color: #f2f2f2;
+}
+
+.card-header {
+  padding: 15px 0 0;
+}
+
+.card-title {
+  font-family: 'Big Shoulders Display', cursive;
+  color: #f2f2f2;
+  padding: 10px 0 20px;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #3e52a3;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  section {
+    margin: 10px 0;
+  }
+
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .card-footer {
+    margin: 2rem 0;
+  }
+
+  .card {
+    padding: 3rem 3rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    height: 60vh;
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%);
+  }
+
+  .card-footer {
+    margin: 5rem 0 2rem;
+    position: absolute;
+    bottom: 3rem;
+  }
+
+  .card {
+    padding: 3rem;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
