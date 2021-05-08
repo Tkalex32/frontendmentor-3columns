@@ -114,6 +114,7 @@ img {
   text-transform: uppercase;
   -webkit-transform-origin: left;
           transform-origin: left;
+  font-size: 3.2rem;
 }
 
 .attribution {
